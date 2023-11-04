@@ -5,7 +5,7 @@ import pickle
 app = Flask(__name__)
 
 # Load the crop recommendation model
-crop_recommendation_model_path = 'models/RandomForest1.pkl'
+crop_recommendation_model_path = 'RandomForest1.pkl'
 crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, 'rb'))
 
 @app.route('/recommend_crop', methods=['POST'])
